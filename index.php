@@ -16,13 +16,13 @@
               id="prueba"
               href="./sections/00whatisnetsuite.html"
               target="contentIFrame"
-              >Configure your account</a
+              >NetSuite customization</a
             >
           </li>
           <li class="navigation active">
             <a
               id="prueba"
-              href="./sections/02installsuitecloud.html"
+              href="./sections/01installsuitecloud.html"
               target="contentIFrame"
               >SuiteCloud SDK</a
             >
@@ -50,7 +50,7 @@
         id="contentIFrame"
         name="contentIFrame"
         title="Content"
-        src="./sections/quickstart.html"
+        src="./sections/00whatisnetsuite.html"
       >
       </iframe>
     </div>
