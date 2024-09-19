@@ -19,7 +19,7 @@
               >NetSuite customization</a
             >
           </li>
-          <li class="navigation active">
+          <li class="navigation">
             <a
               id="prueba"
               href="./sections/01installsuitecloud.html"
