@@ -37,6 +37,11 @@
               >Hello World!</a
             >
           </li>
+          <li class="navigation">
+            <a href="./sections/04deploying.html" target="contentIFrame"
+              >Deploying</a
+            >
+          </li>
         </ul>
         <ul>
           <h5>REFERENCE</h5>
