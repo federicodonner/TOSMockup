@@ -1,0 +1,90 @@
+<head>
+  <link href="../style.css" type="text/css" rel="stylesheet" />
+</head>
+<main>
+  <h2>What is NetSuite and how can you customize it?</h2>
+  <p>Welcome to SuiteCloud development!</p>
+  <p>
+    This page will give you an introduction to the core concepts of developing
+    for NetSuite. We will configure the local environment and create our first
+    SuiteApp.
+  </p>
+  <p>
+    But first, we have to go through what NetSuite is and what possibilities ot
+    offeres for customization.
+  </p>
+  <h3>What is NetSuite</h3>
+  <p>
+    NetSuite is an Enterprise Resource Planning (ERP) platform. What set it
+    apart from others is the possibilities for customization. Every process
+    offers hooks for custom functions, data can be accessed securely from
+    external systems and many different types of scripts allow the creation of
+    tailored experience for the users.
+  </p>
+  <p>
+    SuiteCloud Developers Network (SDN) empowers NetSuite partners to create
+    SuiteApps that package this custom functionality and offer it to our mutual
+    customers via a marketplace.
+  </p>
+  <div class="aside">
+    SuiteApps are one or many scripts packaged and deployed to customers'
+    accounts. Each script (called SuiteScripts) can be of one of multiple types
+    depending on its functionality. Some scripts simply run code on demand,
+    others get linked to specific core ERP operations, others show an interface
+    or can be called from external systems. Your solution will be comprised of
+    as many SuiteScrips as necessary.
+  </div>
+  <h3>Requirements</h3>
+  <p>
+    Before we start make sure you have access to a Test Drive account. They're
+    provisioned to partners during the SDN onboarding process. In the next
+    sections we'll discuss the different types of accounts and how to best use
+    them. You can recognize your Test Drive accounts by the account number in
+    the URL. It should start with "tstdrv" or "td".
+  </p>
+  <p>These accounts are full production accounts. This means two things:</p>
+  <ul>
+    <li>
+      No one from NetSuite can grant access to the account if everyone in your
+      team gets locked out. Please make sure to create a few Administrators.
+    </li>
+    <li>
+      Everything your customers can do in their accounts can be done in the
+      development accounts, so your SuiteApp can be fully tested and validated
+      before deploying it.
+    </li>
+  </ul>
+  <div class="aside">
+    <p>
+      You as a partner have access to NetSuite's account on NetSuite for basic
+      actions such as registering SuiteApps and contact details. You do not have
+      permissions, though, to push your SuiteApp to that account. You can
+      recognize it by the URL as well, it's the only account that starts with
+      nlcorp.
+    </p>
+    <p>
+      We will go over more of what you can do in the nlcorp account in further
+      sections.
+    </p>
+  </div>
+  <p>
+    In order to be able to use your test drive account for SuiteCloud
+    development, we need to make sure some configurations are set correctly. On
+    the center, go to
+  </p>
+  <div class="code">Setup -> Company -> Enable features</div>
+  <p>
+    There select the last subtab: SuiteCloud, and make sure that the following
+    configurations are turned on:
+  </p>
+  <ul>
+    <li>Token-Based Authentication</li>
+    <li>Oauth 2.0</li>
+    <li>SuiteCloud Development Framework</li>
+  </ul>
+  <p>
+    These configurations allow local SuiteCloud tools to interact with the
+    account such as pushing code and importing objects.
+  </p>
+  <p>Once you're done with the</p>
+</main>

@@ -14,9 +14,17 @@
           <li class="navigation active">
             <a
               id="prueba"
-              href="./sections/quickstart.html"
+              href="./sections/00whatisnetsuite.html"
               target="contentIFrame"
-              >Quick start</a
+              >Configure your account</a
+            >
+          </li>
+          <li class="navigation active">
+            <a
+              id="prueba"
+              href="./sections/02installsuitecloud.html"
+              target="contentIFrame"
+              >SuiteCloud SDK</a
             >
           </li>
           <li class="navigation">
