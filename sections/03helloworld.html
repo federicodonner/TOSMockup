@@ -120,5 +120,67 @@
       test data, so that sales order should exist. Feel free to change the id to
       another one if you prefer.
     </li>
+    <li>
+      The code uses the function log.debug that comes from the "N/log" module.
+      That module is implicitly imported into every SuiteScipt so it's always
+      available.
+    </li>
   </ul>
+  <div class="aside">
+    You may have noticed that, although SuiteScripts are similiar to webpages,
+    this specific one does not render anything quite yet, it only loads a record
+    and logs one of its attributes. Let's add the promised Hello World! to the
+    code.
+  </div>
+  <p>
+    SuiteLets need to show something to the user. Usually that information has
+    to do with the objects being fetched or the logic behind the scenes, for
+    this example you're only going to render the famous "Hello World!" sentence.
+  </p>
+  <p>For that, add the following code inside the onRequest function:</p>
+  <div class="code">
+    var html = "&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello
+    World!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;";<br />
+    context.response.write(html);
+  </div>
+  <p>
+    This code is pretty straighforward to understand, it creates an html object
+    and writes it using the context.response method
+  </p>
+  <p>After all these steps, your SuiteLet code should look like this:</p>
+  <div class="code">
+    /**<br />
+    * @NApiVersion 2.x<br />
+    * @NScriptType Suitelet<br />
+    */<br />
+
+    define(["N/record"], function (record) {<br />
+    &nbsp;&nbsp;&nbsp; function onRequest(context) {<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (context.request.method === "GET")
+    {<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; const salesOrder =
+    record.load({<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    type: record.Type.SALES_ORDER,<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    id: "1",<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; });<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; const entity =
+    salesOrder.getValue({ fieldId: "entity" });<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log.debug("entity",
+    entity);<br />
+
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; var html =
+    "&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    World!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;";<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    context.response.write(html);<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />
+    &nbsp;&nbsp;&nbsp; }<br />
+    &nbsp;&nbsp;&nbsp; return {<br />
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; onRequest: onRequest,<br />
+    &nbsp;&nbsp;&nbsp; };<br />
+    });<br />
+  </div>
 </main>
