@@ -28,8 +28,13 @@
             >
           </li>
           <li class="navigation">
-            <a href="./sections/02firstproject.html.html" target="contentIFrame"
+            <a href="./sections/02firstproject.html" target="contentIFrame"
               >Creating your first project</a
+            >
+          </li>
+          <li class="navigation">
+            <a href="./sections/03helloworld.html" target="contentIFrame"
+              >Hello World!</a
             >
           </li>
           <li class="navigation">
