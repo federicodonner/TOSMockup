@@ -31,4 +31,58 @@
   </p>
   <p>Let's name the file:</p>
   <div class="code">firstSuiteLet.js</div>
+  <p>
+    To allow NetSuite to understand and interact with the SuiteScript correctly,
+    we need to indicate which type of SuiteScript it is and which version it's
+    using. These indications are done using <b>javadoc</b> style comments, so
+    lets's start our script file with:
+  </p>
+  <div class="code">
+    /** <br />* @NApiVersion 2.1 <br />* @NScriptType Suitelet <br />*/
+  </div>
+  <p>
+    These comments indicate that we're going to be using the API Version 2.1 and
+    that the SuiteScript is a SuiteLet.
+  </p>
+  <p>
+    SuiteScripts' are coded using javascript and API version 2.1 fully
+    implements ECMAScript 6. Additionally, SuiteScripts use the define syntax,
+    which receives an array of dependencies and a callback function that will be
+    loaded. That function receives the dependencies as parameters to make them
+    available within the code.
+  </p>
+  <div class="code">define(["N/record"], function ( record) {})</div>
+  <p>
+    In this example you have imported the "N/record" module. Modules in
+    SuiteScrips give additional functionality to the code, exposing methods and
+    allowin the script to access NetSuite's internal elements. There are dozens
+    with different functionalities, for now we're only going to use the
+    "N/record" module.
+  </p>
+  <p>
+    To complete the syntax you need the function to return a function that will
+    be run when the SuiteLet is loaded. Inside the fuction, add:
+  </p>
+  <div class="code">
+    return {<br />
+    &nbsp;&nbsp;&nbsp;onRequest<br />
+    };
+  </div>
+  <p>
+    You still don't have an onRequest function to return, so probably your code
+    editor is giving you errors, we'll get there.
+  </p>
+  <p>Up to this point firstSuiteLet.js should look like this:</p>
+  <div class="code">
+    /**<br />
+    * @NApiVersion 2.x<br />
+    * @NScriptType Suitelet<br />
+    */<br />
+
+    define(["N/record"], function (record) {<br />
+    &nbsp;&nbsp;&nbsp; return {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; onRequest: onRequest,<br />
+    &nbsp;&nbsp;&nbsp; };<br />
+    });
+  </div>
 </main>

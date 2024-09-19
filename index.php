@@ -37,9 +37,6 @@
               >Hello World!</a
             >
           </li>
-          <li class="navigation">
-            <a href="#" class="navigation">SuiteApp Control Center</a>
-          </li>
         </ul>
         <ul>
           <h5>REFERENCE</h5>
