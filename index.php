@@ -28,8 +28,8 @@
             >
           </li>
           <li class="navigation">
-            <a href="./sections/bfntstdrv.html" target="contentIFrame"
-              >BFN and Test Drive accounts</a
+            <a href="./sections/02firstproject.html.html" target="contentIFrame"
+              >Creating your first project</a
             >
           </li>
           <li class="navigation">
