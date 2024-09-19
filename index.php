@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>TOS 2.0</title>
-    <link href="./style.css" type="text/css" rel="stylesheet" />
+    <link href="./style2.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="interaction.js"></script>
   </head>
   <body>
