@@ -1,0 +1,45 @@
+<head>
+  <link href="../style.css" type="text/css" rel="stylesheet" />
+</head>
+<main>
+  <h2>Deploying your SuiteLet</h2>
+  <p>
+    Everything you've done until now is local, and your SuiteLet needs the
+    NetSuite context to run so we have to deploy it to a NetSuite account,
+    you're going to use your Test Drive account we configured earlier. For that
+    we need to link it to the SuiteCloud SDK.
+  </p>
+  <p>On your command line, run the command</p>
+  <div class="code">suitecloud account:setup</div>
+  <p>
+    You will have to enter an authentication ID, that's used to recognize the
+    authentication later, you could have many accounts for development purposes.
+  </p>
+  <p>
+    The process will continue on the browser by authenticating with NetSuite.
+    You will need to choose a role that has the Oauth 2.0 permissions, if you're
+    an administrator in the account it should work.
+  </p>
+  <div class="aside">
+    <p>
+      If you're not an administrator in the account, you can request one to give
+      you the appropriate permissions.
+    </p>
+  </div>
+  <img src="../images/authentication.png" alt="Authentication" />
+  <p>
+    Once you're authenticated, you can push your SuiteApp to the Test Drive
+    account by running the command
+  </p>
+  <div class="code">suitecloud project:deploy</div>
+  <p>
+    That command will validate the code and deploy it into the account. Because
+    our SuiteApp is very simple, the validation will not return any issues, you
+    might need to add dependencies to your SuiteApp by running the code
+  </p>
+  <div class="code">suitecloud project:adddependencies</div>
+  <p>
+    That will edit the manifest.xml file to add the required dependencies for
+    your code.
+  </p>
+</main>
