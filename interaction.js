@@ -1,4 +1,7 @@
 window.onload = function () {
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  alert(timezone);
+
   let anchors = document.querySelectorAll(".navigation");
 
   for (let anchor of anchors) {
